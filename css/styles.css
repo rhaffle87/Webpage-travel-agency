@@ -148,6 +148,9 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
 }
 
 .contact-form {
@@ -168,7 +171,8 @@ nav ul li a {
     margin-bottom: 5px;
 }
 
-.contact-form input, .contact-form select {
+.contact-form input,
+.contact-form select {
     padding: 10px;
     margin-bottom: 15px;
 }
@@ -209,7 +213,7 @@ nav ul li a {
     color: #666;
 }
 
-.call-to-action {
+.cta button {
     padding: 10px 20px;
     background: #000;
     color: #fff;
