@@ -1,32 +1,21 @@
-//show time
-function showTime() {
-	document.getElementById('currentTime').innerHTML = new Date().toUTCString();
-}
-showTime();
-setInterval(function () {
-	showTime();
-}, 1000);
+document.addEventListener("DOMContentLoaded", function () {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".banner .slide");
 
-// Auto-slide functionality for banner
-let currentSlide = 0;
-const slides = document.querySelectorAll(".banner .slide");
+  function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+  }
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === index);
-  });
-}
+  function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+  }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
-
-setInterval(nextSlide, 5000); // Change slide every 5 seconds
-
-// Initial display
-showSlide(currentSlide);
-
+  setInterval(nextSlide, 4000); // Change slide every 5 seconds
+  showSlide(currentSlide); // Initial display
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   // Form validation
