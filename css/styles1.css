@@ -1,0 +1,330 @@
+/* Basic reset */
+* {
+    color: #666;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Sticky Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    position: fixed; /* Make the header stick to the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's on top of other content */
+    transition: background-color 0.5s, box-shadow 0.5s; /* Smooth transition for background color and shadow */
+}
+
+/* Navigation Bar Scroll Effect */
+body.scrolled header {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque background when scrolled */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+/* Navigation Links */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 3.5px;
+    transition: background-color 0.5s, opacity 0.5s; /* Smooth transition for background color and opacity */
+}
+
+header nav ul li a:hover {
+    background-color: #333;
+    color: white;
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+
+/* Additional Styles */
+.logo img {
+    height: 35px;
+}
+
+/* Banner section */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    background: #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px; /* Adjust for fixed header */
+    position: relative;
+}
+
+.banner h1, .banner p {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.banner .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.banner .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    opacity: 0.8; /* Optional: Add opacity to improve text visibility */
+}
+
+.banner .slide.active {
+    display: block;
+}
+
+/* Adjust header and text positioning */
+.banner h1 {
+    top: 30%; /* Adjust based on your preference */
+    font-size: 2.5rem; /* Adjust based on your preference */
+}
+
+.banner p {
+    top: 50%; /* Adjust based on your preference */
+    font-size: 1.5rem; /* Adjust based on your preference */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-top: 70px; /* Adjust for fixed header */
+}
+
+.left-zone,
+.right-zone {
+    padding: 20px;
+}
+
+.left-zone {
+    flex: 3;
+}
+
+.right-zone {
+    flex: 2;
+}
+
+.image-placeholder img {
+    background-color: #f0f0f0;
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.quote {
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 38px;
+    color: #666;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 38px;
+    color: #666;
+}
+
+.user-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+
+.product-offer {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.features {
+    margin-top: 20px;
+}
+
+.features p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.circle {
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #666;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.contact-form {
+    padding: 50px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.contact-form h2 {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.contact-form p {
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 80px;
+    color: #666;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form select {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    padding: 10px 100px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 75px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+}
+
+.packages {
+    padding: 10px 10px;
+}
+
+.packages h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.package-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.package {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.closing {
+    padding: 20px;
+    text-align: center;
+}
+
+.call-to-action {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.call-to-action:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.footer-content nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
