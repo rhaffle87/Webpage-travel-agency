@@ -16,27 +16,6 @@ This project is a travel agent website that provides information about various t
 - CSS
 - JavaScript
 
-## **File Structure**
-project/
-│
-├── css/
-│ └── styles.css
-│
-├── images/
-│ ├── banner1.jpg
-│ ├── banner2.jpg
-│ ├── banner3.jpg
-│ ├── placeholder.jpg
-│ ├── user.png
-│ └── moqups-logo.svg
-│
-├── js/
-│ └── script.js
-│
-├── index.html
-└── README.md
-
-
 ## **Getting Started**
 
 ### **Prerequisites**
