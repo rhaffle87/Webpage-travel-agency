@@ -1,6 +1,5 @@
 /* Basic reset */
 * {
-    color: #666;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,6 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
 }
 
 /* Sticky Navigation Bar */
@@ -16,19 +16,19 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    position: fixed; /* Make the header stick to the top */
+    background-color: #add8e6;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure it's on top of other content */
-    transition: background-color 0.5s, box-shadow 0.5s; /* Smooth transition for background color and shadow */
+    z-index: 1000;
+    transition: background-color 0.5s, box-shadow 0.5s;
 }
 
 /* Navigation Bar Scroll Effect */
 body.scrolled header {
-    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque background when scrolled */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    background-color: #87ceeb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation Links */
@@ -43,17 +43,18 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
+    background-color: white;
     color: #333;
     padding: 10px 20px;
     border: 1px solid #333;
     border-radius: 3.5px;
-    transition: background-color 0.5s, opacity 0.5s; /* Smooth transition for background color and opacity */
+    transition: background-color 0.5s, opacity 0.5s;
 }
 
 header nav ul li a:hover {
-    background-color: #333;
+    background-color: #1aa1ce;
     color: white;
-    opacity: 0.8; /* Reduce opacity on hover */
+    opacity: 0.8;
 }
 
 /* Additional Styles */
@@ -68,12 +69,12 @@ header nav ul li a:hover {
     height: 300px;
     overflow: hidden;
     text-align: center;
-    background: #ddd;
+    background: #add8e6;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px; /* Adjust for fixed header */
+    margin-top: 60px;
     position: relative;
 }
 
@@ -96,8 +97,8 @@ header nav ul li a:hover {
 .banner .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
-    opacity: 0.8; /* Optional: Add opacity to improve text visibility */
+    object-fit: cover;
+    opacity: 0.8;
 }
 
 .banner .slide.active {
@@ -106,13 +107,13 @@ header nav ul li a:hover {
 
 /* Adjust header and text positioning */
 .banner h1 {
-    top: 30%; /* Adjust based on your preference */
-    font-size: 2.5rem; /* Adjust based on your preference */
+    top: 30%;
+    font-size: 2.5rem;
 }
 
 .banner p {
-    top: 50%; /* Adjust based on your preference */
-    font-size: 1.5rem; /* Adjust based on your preference */
+    top: 50%;
+    font-size: 1.5rem;
 }
 
 .main-content {
@@ -121,7 +122,7 @@ header nav ul li a:hover {
     margin-top: 20px;
     margin-left: 8px;
     margin-right: 8px;
-    padding-top: 70px; /* Adjust for fixed header */
+    padding-top: 70px;
 }
 
 .left-zone,
@@ -170,20 +171,30 @@ header nav ul li a:hover {
     margin-right: 25px;
 }
 
-.product-offer {
+.product-offer1 {
     margin-top: 60px;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-offer2 {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-align: center;
 }
 
 .features {
     margin-top: 20px;
+    margin-left: 100px;
+    padding: 20px;
+    align-items: center;
 }
 
 .features p {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    color: #666;
+    color: #000000;
 }
 
 .circle {
@@ -191,8 +202,8 @@ header nav ul li a:hover {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: #f0f0f0;
-    color: #666;
+    background-color: #add8e6;
+    color: #fff;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
@@ -201,9 +212,9 @@ header nav ul li a:hover {
 
 .contact-form {
     padding: 50px;
-    border: 1px solid #ddd;
+    border: 1px solid #add8e6;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
 }
 
 .contact-form h2 {
@@ -235,8 +246,8 @@ header nav ul li a:hover {
 }
 
 .contact-form button {
-    background-color: #333;
-    color: #fff;
+    color: rgb(0, 0, 0);
+    background-color: #add8e6;
     display: flex;
     padding: 10px 125px;
     border: none;
@@ -244,50 +255,19 @@ header nav ul li a:hover {
     align-self: center;
     margin-top: 20px;
     margin-bottom: 75px;
+    transition: background-color 0.5s, opacity 0.5s;
 }
 
 .contact-form button[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
+    background-color: #6495ed;
+    color: white;
+}
 
-  .contact-form .confirmation {
+.contact-form .confirmation {
     padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border: 1px solid #add8e6;
     display: none;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    .banner {
-        height: 200px;
-    }
-
-    .main-content {
-        flex-direction: column;
-    }
-    
-    .package-link {
-        flex: 1 1 calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .package-link {
-        flex: 1 1 100%;
-    }
 }
 
 .packages {
@@ -317,7 +297,7 @@ header nav ul li a:hover {
 .package {
     background-color: #f9f9f9;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #add8e6;
     border-radius: 5px;
     box-sizing: border-box;
     display: flex;
@@ -331,7 +311,7 @@ header nav ul li a:hover {
 .package .icon {
     width: 50px;
     height: 50px;
-    background-color: #f0f0f0;
+    background-color: #add8e6;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -356,7 +336,7 @@ header nav ul li a:hover {
 }
 
 .package:hover {
-    background-color: #333;
+    background-color: #add8e6;
     color: #fff;
 }
 
@@ -383,28 +363,34 @@ header nav ul li a:hover {
 }
 
 .call-to-action {
+    background-color: #add8e6;
+    color: rgb(0, 0, 0);
     padding: 15px 40px;
     border: none;
-    background-color: #333;
-    color: #fff;
     border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: justify;
+    transition: background-color 0.5s, opacity 0.5s;
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 .call-to-action:hover {
-    background-color: #555;
+    background-color: #6495ed;
+    color: white;
+    opacity: 0.8;
 }
 
 footer {
-    background-color: #333;
+    background-color: #add8e6;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
 .footer-content p {
-    color: #b8b8b8;
+    color: #333;
 }
 
 .footer-content img {
@@ -413,7 +399,59 @@ footer {
 }
 
 .footer-content nav a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     margin: 0 10px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left-zone,
+    .right-zone {
+        flex: 1;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .package-grid {
+        flex-direction: column;
+    }
+
+    .package-link {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .package {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 200px;
+    }
+
+    .banner h1 {
+        font-size: 10px;
+    }
+
+    .banner p {
+        font-size: 5px;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
+
+    .package {
+        padding: 10px;
+    }
 }
