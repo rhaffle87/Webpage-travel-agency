@@ -432,11 +432,11 @@ footer {
     }
     .banner h1 {
         font-size: 1.8rem;
-        top: 20%; /* adjust the top position */
+        top: 35%; /* adjust the top position */
     }
     .banner p {
         font-size: 1.2rem;
-        top: 40%; /* adjust the top position */
+        top: 55%; /* adjust the top position */
         margin-top: 0; /* remove the margin top */
     }
     .banner img {
