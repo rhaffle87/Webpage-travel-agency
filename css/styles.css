@@ -440,11 +440,11 @@ footer {
     }
 
     .banner h1 {
-        font-size: 10px;
+        font-size: 1.5rem;
     }
 
     .banner p {
-        font-size: 5px;
+        font-size: 1rem;
     }
 
     .contact-form {
