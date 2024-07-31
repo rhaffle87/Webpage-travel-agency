@@ -1,52 +1,56 @@
+const SLIDE_INTERVAL = 4000; // slide interval in milliseconds
+const SCROLL_THRESHOLD = 50; // scroll threshold in pixels
+
 document.addEventListener("DOMContentLoaded", function () {
+  // Slide show functionality
   let currentSlide = 0;
   const slides = document.querySelectorAll(".banner .slide");
 
   function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.display = i === index ? "block" : "none";
-      });
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? "block" : "none";
+    });
   }
 
   function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
   }
 
-  setInterval(nextSlide, 4000); // Change slide every 5 seconds
+  setInterval(nextSlide, SLIDE_INTERVAL);
   showSlide(currentSlide); // Initial display
-});
 
-document.addEventListener("DOMContentLoaded", () => {
   // Form validation
-  const form = document.getElementById("contactForm");
-  form.addEventListener("submit", function (event) {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+  const form = document.getElementById("contact-form");
+  const confirmation = document.querySelector(".contact-form .confirmation");
 
-    if (name === "" || email === "") {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    if (!name || !email) {
       alert("Please fill in all fields.");
-      event.preventDefault();
     } else if (!validateEmail(email)) {
       alert("Please enter a valid email address.");
-      event.preventDefault();
+    } else {
+      confirmation.style.display = "block";
+      form.reset();
     }
   });
 
-  //validate email
   function validateEmail(email) {
+    if (typeof email !== "string") return false;
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   }
 });
 
-//nav bar hover scroll
+// Navbar hover scroll effect
 document.addEventListener('scroll', function () {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        document.body.classList.add('scrolled');
-    } else {
-        document.body.classList.remove('scrolled');
-    }
+  if (window.scrollY > SCROLL_THRESHOLD) {
+    document.body.classList.add('scrolled');
+  } else {
+    document.body.classList.remove('scrolled');
+  }
 });
-

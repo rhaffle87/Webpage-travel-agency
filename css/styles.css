@@ -159,7 +159,7 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 38px;
+    margin-left: 50px;
     color: #666;
 }
 
@@ -238,12 +238,23 @@ header nav ul li a:hover {
     background-color: #333;
     color: #fff;
     display: flex;
-    padding: 10px 100px;
+    padding: 10px 125px;
     border: none;
     cursor: pointer;
     align-self: center;
     margin-top: 20px;
     margin-bottom: 75px;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+  .contact-form .confirmation {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -267,6 +278,16 @@ header nav ul li a:hover {
     .main-content {
         flex-direction: column;
     }
+    
+    .package-link {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .package-link {
+        flex: 1 1 100%;
+    }
 }
 
 .packages {
@@ -281,7 +302,16 @@ header nav ul li a:hover {
 .package-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    column-gap: 1.5rem;
+    row-gap: 60px;
+    justify-content: center;
+}
+
+.package-link {
+    flex: 1 1 calc(33.333% - 40px);
+    text-decoration: none;
+    color: inherit;
+    max-width: 300px;
 }
 
 .package {
@@ -289,22 +319,77 @@ header nav ul li a:hover {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    flex: 1 1 calc(33.333% - 40px);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #666;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.package .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.package .icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.package h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.package p {
+    font-size: 14px;
+    color: #666;
+}
+
+.package:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.package:hover h3,
+.package:hover p {
+    color: #fff;
 }
 
 .closing {
-    padding: 20px;
+    padding: 10px 20px;
     text-align: center;
 }
 
+.closing h2 {
+    text-align: center;
+    margin: 50px;
+}
+
+.closing p {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
 .call-to-action {
-    padding: 10px 20px;
+    padding: 15px 40px;
     border: none;
     background-color: #333;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .call-to-action:hover {
@@ -316,6 +401,10 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+.footer-content p {
+    color: #b8b8b8;
 }
 
 .footer-content img {
