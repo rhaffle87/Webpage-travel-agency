@@ -1,8 +1,8 @@
-const SLIDE_INTERVAL = 4000; // slide interval in milliseconds
-const SCROLL_THRESHOLD = 50; // scroll threshold in pixels
+const SLIDE_INTERVAL = 4000; 
+const SCROLL_THRESHOLD = 50; 
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Slide show functionality
+  
   let currentSlide = 0;
   const slides = document.querySelectorAll(".banner .slide");
 
@@ -18,9 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setInterval(nextSlide, SLIDE_INTERVAL);
-  showSlide(currentSlide); // Initial display
+  showSlide(currentSlide); 
 
-  // Form validation
   const form = document.getElementById("contact-form");
   const confirmation = document.querySelector(".contact-form .confirmation");
 
@@ -46,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Navbar hover scroll effect
 document.addEventListener('scroll', function () {
   if (window.scrollY > SCROLL_THRESHOLD) {
     document.body.classList.add('scrolled');
